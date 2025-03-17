@@ -1,0 +1,230 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
+      "responses": [
+        "See you later, thanks for visiting. Closing the chat…",
+        "Have a nice day. Closing the chat…",
+        "Bye! Come back again soon. Closing the chat…"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank's a lot!"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+    {
+      "tag": "general_advice",
+      "patterns": [
+        "What advice do you have for university students?",
+        "Do you have any general tips for university?",
+        "How do I succeed in university?",
+        "Advice for university life"
+      ],
+      "responses": [
+        "Stay organized and plan your schedule to balance all aspects of university life.",
+        "Take care of your health and make time for social activities."
+      ]
+    },
+    {
+      "tag": "study_advice",
+      "patterns": [
+        "Advice for studying in university",
+        "How can I study effectively in university?",
+        "Tips for university studies",
+        "How to be better at studying?"
+      ],
+      "responses": [
+        "Make sure to attend lectures and actively participate in class.",
+        "Break your study sessions into smaller, focused intervals with regular breaks.",
+        "Use resources like the library, online tutorials, and study groups."
+      ]
+    },
+    {
+      "tag": "time_management_advice",
+      "patterns": [
+        "How do I manage my time in university?",
+        "Time management tips for university students",
+        "How can I balance my studies and personal life?"
+      ],
+      "responses": [
+        "Use a planner or calendar to track deadlines and allocate study time.",
+        "Prioritize tasks and focus on what's most important each day.",
+        "Avoid procrastination by breaking tasks into smaller steps."
+      ]
+    },
+    {
+      "tag": "joining",
+      "patterns": [
+        "How can I join Women in Science?",
+        "I want to be a part of Women in Science.",
+        "Where do I sign up for Women in Science?",
+        "How do I register for Women in Science?",
+        "What is the process to become a member?"
+      ],
+      "responses": [
+        "You can join Women in Science by visiting the 'Join' section on our website and filling out the Google form.",
+        "To sign up, head over to the 'Join' section on our website. All details, including membership fees and benefits, are listed there!",
+        "Just visit the 'Join' section on our website and complete the registration form. We’d love to have you!"
+      ]
+    },
+    {
+      "tag": "eligibility",
+      "patterns": [
+        "Who can join Women in Science?",
+        "Is Women in Science only for women?",
+        "Can men join Women in Science?",
+        "Are non-STEM students allowed to join?",
+        "Is this club open to everyone?"
+      ],
+      "responses": [
+        "Women in Science is open to everyone! You don’t have to be a woman or in a science field to join—anyone who supports our mission is welcome.",
+        "We welcome all students who are interested in supporting women in STEM! Regardless of gender or field of study, you can be part of our community.",
+        "Yes! Our club is open to everyone, regardless of gender or academic background."
+      ]
+    },
+    {
+      "tag": "membership_benefits",
+      "patterns": [
+        "What do I get as a Women in Science member?",
+        "What are the benefits of joining?",
+        "Why should I join Women in Science?",
+        "What do members of Women in Science do?",
+        "Are there any perks for joining?"
+      ],
+      "responses": [
+        "As a member, you get access to exclusive networking events, mentorship programs, workshops, and career development opportunities!",
+        "Joining Women in Science gives you a chance to connect with professionals, attend speaker events, and gain valuable skills for your future career.",
+        "We offer mentorship, skill-building workshops, social events, and a supportive community of like-minded individuals."
+      ]
+    },
+    {
+      "tag": "what_we_do",
+      "patterns": [
+        "What does Women in Science do?",
+        "What kind of events does Women in Science hold?",
+        "What activities does this club organize?",
+        "Tell me more about Women in Science’s events",
+        "What happens in Women in Science meetings?"
+      ],
+      "responses": [
+        "Women in Science hosts networking events, mentorship programs, workshops, and career panels to support students in STEM.",
+        "We organize speaker events, hands-on workshops, and networking opportunities to help members connect and grow.",
+        "Our club holds a variety of events, including mentorship programs, career development sessions, and fun social activities!"
+      ]
+    },
+    {
+      "tag": "payment",
+      "patterns": [
+        "Is there a fee to join?",
+        "How much does it cost to join?",
+        "How do I pay the joining fee?"
+      ],
+      "responses": [
+        "Yes, there is a small fee of $5 that is there to ensure we can support club activities throughout the year!",
+        "It costs $5 to join! We do this so that we can support the ongoing club activities and make it the best experience for everyone!",
+        "You can pay the fee via E-Transfer. You can find more information about it in our Membership Google Form."
+      ]
+    },
+    {
+      "tag": "women_in_science",
+      "patterns": [
+        "Tell me a fact about women in science?",
+        "Who was the first woman in science?"
+      ],
+      "responses": [
+        "The first known female physician was Pesenet. She was an Egyptian physician who lived around 2600–2500 BCE.",
+        "The first known female astronomer was Aglaonike. She was an ancient Greek astronomer who predicted eclipses.",
+        "Marie Curie was a Polish-born physicist who was the first woman to win a Nobel Prize. She won the Nobel Prize in Physics in 1903 and the Nobel Prize in Chemistry in 1911."
+      ]
+    },
+    {
+      "tag": "women_in_tech",
+      "patterns": [
+        "Who was the first woman in tech?",
+        "Who was the first woman in technology?"
+      ],
+      "responses": [
+        "Ada Lovelace was the first female programmer.",
+        "Ada Lovelace, the first female programmer, made an algorithm that was designed to calculate Bernoulli numbers using the Analytical Engine, a hypothetical machine that was never built."
+      ]
+    },
+    {
+      "tag": "women_in_engineering",
+      "patterns": [
+        "Who was the first woman in engineering?"
+      ],
+      "responses": [
+        "Rita de Morais Sarmento was the first woman to earn an engineering degree in Europe in 1894.",
+        "Mary Winston Jackson was NASA's first African-American engineer. She worked in wind tunnels and analyzed data on aircraft flight experiments.",
+        "Elsie MacGill was the first Canadian woman to earn an electrical engineering degree in 1927. She became the first female aeronautical engineer in the world after earning her master's degree in aeronautical engineering."
+      ]
+    },
+    {
+      "tag": "women_in_math",
+      "patterns": [
+        "Who was the first woman in math?",
+        "Who was the first woman in mathematics?"
+      ],
+      "responses": [
+        "Hypatia of Alexandria is one of the earliest known female mathematicians. She was born in 350 CE, and was deeply interested in astronomy–then considered part of mathematics. She constructed her own versions of astrolabes and hydrometers, instruments used for physics and astronomy research.",
+        "In 1874, Russian mathematician Sofya Kovalevskaya became the first woman to earn a doctorate in mathematics.",
+        "In 1930, Cecilia Kreiger became the first woman to earn a PhD in mathematics in Canada, at the University of Toronto."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How can I contact you?",
+        "How can I contact the WIS team?",
+        "How can I contact the women in science team?"
+      ],
+      "responses": [
+        "You can go to the contact page of this website to submit a message through the contact form! If you would prefer, you can also send us an email at uwo.wis.events@gmail.com, or send us a message on our instagram @womeninscienceuwo. You can also find us on our facebook: Women in Science UWO."
+      ]
+    }
+  ]
+}
