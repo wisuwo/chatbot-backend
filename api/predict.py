@@ -73,7 +73,7 @@ def handler(request):
             }
 
     return {
-        "statusCode": 405,
-        "body": json.dumps({"error": "Method Not Allowed"}),
-        "headers": {"Access-Control-Allow-Origin": "*"},
+        "statusCode": 200,
+        "body": json.dumps({"key": "value"}),
+        "headers": {"Content-Type": "application/json"}
     }
