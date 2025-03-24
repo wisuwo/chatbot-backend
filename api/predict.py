@@ -50,30 +50,16 @@ def handler(request):
         }
 
     if request.method == "POST":
-        try:
-            data = request.get_json()
-            message = data.get("message", "")
-            if not message:
-                return {
-                    "statusCode": 400,
-                    "body": json.dumps({"error": "No message provided"}),
-                    "headers": {"Access-Control-Allow-Origin": "*"},
-                }
-            response = predict_intent(message)
-            return {
-                "statusCode": 200,
-                "body": json.dumps({"answer": response}),
-                "headers": {"Access-Control-Allow-Origin": "*"},
-            }
-        except Exception as e:
-            return {
-                "statusCode": 500,
-                "body": json.dumps({"error": str(e)}),
-                "headers": {"Access-Control-Allow-Origin": "*"},
-            }
-
+        data = request.get_json()
+        message = data.get("message", "")
+        response_message = f"Received: {message}"
+        return {
+            "statusCode": 200,
+            "body": json.dumps({"answer": response_message}),
+            "headers": {"Access-Control-Allow-Origin": "*", "Content-Type": "application/json"},
+        }
     return {
-        "statusCode": 200,
-        "body": json.dumps({"key": "value"}),
-        "headers": {"Content-Type": "application/json"}
+        "statusCode": 405,
+        "body": json.dumps({"error": "Method Not Allowed"}),
+        "headers": {"Access-Control-Allow-Origin": "*", "Content-Type": "application/json"},
     }
