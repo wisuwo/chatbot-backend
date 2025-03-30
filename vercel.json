@@ -1,4 +1,0 @@
-{
-    "routes": [{ "src": "/(.*)", "dest": "/api/predict.py" }]
-  }
-  
