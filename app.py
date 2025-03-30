@@ -1,13 +1,13 @@
-import os
-from flask import Flask, send_from_directory, request, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
+from chat import get_response
 
-app = Flask(__name__, static_folder="build", static_url_path="/")
+app = Flask(__name__)
 CORS(app)
 
 @app.route("/")
-def serve_react():
-    return send_from_directory(app.static_folder, "index.html")
+def index():
+    return jsonify({"message": "Chatbot API running!"})
 
 @app.route("/predict", methods=["POST"])
 def predict():
