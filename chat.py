@@ -1,43 +1,36 @@
-import torch
-import json
-import random
-from model import NeuralNet
-from nltk_utils import tokenize, bag_of_words
+import requests
+import os
 
-# Load intents
-with open("intents.json", "r") as f:
-    intents = json.load(f)
+from club_info import CLUB_CONTEXT
 
-# Load the trained model
-FILE = "training_data/data.pth"
-data = torch.load(FILE)
+HF_API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
+HF_TOKEN = os.getenv("HF_TOKEN")
 
-input_size = data["input_size"]
-hidden_size = data["hidden_size"]
-output_size = data["output_size"]
-all_words = data["all_words"]
-tags = data["tags"]
-model_state = data["model_state"]
+headers = {
+    "Authorization": f"Bearer {HF_TOKEN}",
+}
 
-model = NeuralNet(input_size, hidden_size, output_size)
-model.load_state_dict(model_state)
-model.eval()  # Set model to evaluation mode
+def get_response(user_message): 
 
-# ✅ This is the function app.py will import
-def get_response(user_message):
-    # Process input
-    sentence = tokenize(user_message)
-    X = bag_of_words(sentence, all_words)
-    X = torch.tensor(X, dtype=torch.float32).unsqueeze(0)
+    full_context = f"""
+{CLUB_CONTEXT}
+User: {user_message}
+Assistant:"""
 
-    # Predict intent
-    output = model(X)
-    _, predicted = torch.max(output, dim=1)
-    tag = tags[predicted.item()]
+    payload = {
+        "inputs": full_context,
+        "parameters": {
+            "max_new_tokens": 100,
+            "temperature": 0.7,
+            "return_full_text": False,
+        },
+    }
+    
+    response = requests.post(HF_API_URL, headers=headers, json=payload)
 
-    # Find response
-    for intent in intents["intents"]:
-        if intent["tag"] == tag:
-            return random.choice(intent["responses"])
-
-    return "I'm not sure how to respond to that."
+    if response.status_code == 200:
+        generated = response.json()[0]["generated_text"]
+        return generated.strip()
+    else:
+        print(f"Error: {response.status_code}, {response.text}")
+        return "Sorry, I couldn't process your request at the moment."

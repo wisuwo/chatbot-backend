@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Python virtual environments
+venv/
+env/
+.virtualenv/
+.venv/
+
+# Environment variables
+.env
+
+# Jupyter Notebooks checkpoints (optional)
+.ipynb_checkpoints
+
+# IDE files (optional)
+.vscode/
+.idea/
+
+# macOS files (optional)
+.DS_Store
+
+# Logs
+*.log
+
+# Misc
+*.sqlite3
+*.db
