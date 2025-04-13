@@ -11,14 +11,14 @@ env/
 # Environment variables
 .env
 
-# Jupyter Notebooks checkpoints (optional)
+# Jupyter Notebooks checkpoints
 .ipynb_checkpoints
 
-# IDE files (optional)
+# IDE files
 .vscode/
 .idea/
 
-# macOS files (optional)
+# macOS files
 .DS_Store
 
 # Logs
