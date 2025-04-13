@@ -5,7 +5,7 @@ from club_info import CLUB_CONTEXT
 
 load_dotenv()
 
-HF_API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
+HF_API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
 HF_TOKEN = os.getenv("HF_TOKEN")
 
 headers = {
